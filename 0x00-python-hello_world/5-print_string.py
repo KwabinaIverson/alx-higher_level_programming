@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 str = "Holberton School"
-print(str * 3,"\n",str[:9])
+mul_of_str = str * 3
+print(mul_of_str)
+print(str[:9])
