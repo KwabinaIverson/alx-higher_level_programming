@@ -8,4 +8,3 @@ if (arg1 !== undefined && arg2 !== undefined) {
 } else {
   console.log(`${arg1} is ${arg2}`);
 }
-
