@@ -1,18 +1,3 @@
-#!/usr/bin/env bash
-
-if [[ $# -ne 1 ]]; then
-  echo "Usage: $0 <URL>"
-  exit 1
-fi
-
-URL=$1
-
-# Get the size of the body of the response
-size=$(curl -sLI $URL | grep Content-Length | awk '{print $2}')
-
-if [[ -z $size ]]; then
-  echo "Error: Unable to get size of response body"
-  exit 1
-fi
-
-echo "Size of response body: $size bytes"
+#!/bin/bash
+# A Bash script that takes in a URL, sends a request and displays the size of the body of the response
+curl -sI "$1" | grep "Content-Length:" | cut -d " " -f 2
