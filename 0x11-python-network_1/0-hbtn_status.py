@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 
-# HTTP fetch module
-import urllib.request
-
 if __name__ == "__main__":
     """ HTTP fetch request from a url """
+    import urllib.request
  
     url = 'https://alx-intranet.hbtn.io/status'
 
