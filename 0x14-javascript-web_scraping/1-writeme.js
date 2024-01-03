@@ -6,7 +6,7 @@ const filePath = process.argv[2];
 const writeString = process.argv[3];
 
 if (!filePath || !writeString) {
-  console.error('Usage: node 0-readme.js <file-path> <string-to-write>');
+  console.error('Usage: node 1-writeme.js <file-path> <string-to-write>');
   process.exit(1);
 }
 
