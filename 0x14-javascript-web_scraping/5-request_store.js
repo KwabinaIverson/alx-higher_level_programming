@@ -1,0 +1,24 @@
+#!/usr/bin/node
+
+const request = require('request');
+const fs = require('fs');
+
+const url = process.argv[2];
+const filePath = process.argv[3];
+
+if (!url || !filePath) {
+  console.error('Usage: node 5-save_webpage.js <url> <file-path>');
+  process.exit(1);
+}
+
+request.get(url, (error, response, body) => {
+  if (error) {
+    console.error(error);
+  } else {
+    fs.writeFile(filePath, body, 'utf-8', (writeError) => {
+      if (writeError) {
+        console.error(writeError);
+      }
+    });
+  }
+});
